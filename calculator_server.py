@@ -13,9 +13,8 @@ from sympy import integrate as sympy_integrate
 
 # Create MCP Server
 app = FastMCP(
-    title="Mathematical Calculator",
-    description="A server for complex mathematical calculations",
-    version="1.0.0",
+    name="Mathematical Calculator",
+    instructions="A server for complex mathematical calculations",
     dependencies=["numpy", "scipy", "sympy"],
 )
 
@@ -747,7 +746,7 @@ def main():
     parser = argparse.ArgumentParser(description="Mathematical Calculator MCP Server")
     parser.add_argument("--stdio", action="store_true", help="Use STDIO transport instead of SSE")
     args = parser.parse_args()
-    
+
     transport = "stdio" if args.stdio else TRANSPORT
     app.run(transport=transport)
 

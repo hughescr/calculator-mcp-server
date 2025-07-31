@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools~=80.9.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,18 +7,18 @@ name = "calculator-mcp-server"
 version = "1.0.0"
 description = "A server for complex mathematical calculations"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
-    "fastmcp>=0.4.1",
-    "numpy>=2.2.0",
-    "scipy>=1.15.0",
-    "sympy>=1.13.0",
-    "matplotlib",
-    "pydantic>=2.10.0",
+    "fastmcp~=2.10.6",
+    "numpy~=2.2.6",
+    "scipy~=1.16.1",
+    "sympy~=1.14.0",
+    "matplotlib~=3.10.5",
+    "pydantic~=2.11.7",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.3.0"]
+dev = ["pytest~=8.4.1"]
 
 [project.scripts]
 calculator-mcp-server = "calculator_server:main"
